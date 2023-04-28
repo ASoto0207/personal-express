@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>car love</title>
+</head>
+
+<body>
+    <h1>GOT CARS?</h1>
+    <form action="/models" method="POST">
+        <input type="text" placeholder="car" name="cars" />
+        <input type="text" placeholder="model" name="model" />
+        <button class="submit">Submit!!!</button>
+    </form>
+  
+        <h2>Cars</h2>
+        <ul class="vins">
+                <div id="noInput"></div>
+            <% for(let i=0; i < models.length; i++) {%>
+                <li class="model">
+                    <span><%= models[i].cars %></span>
+                    <span><%= models[i].model %></span>
+                    <button class="trash">Delete</button>
+                </li>
+                <%}%>
+
+        </ul>
+     
+        <script src="/main.js"></script>
+</body>
+
+</html>
